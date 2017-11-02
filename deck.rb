@@ -1,6 +1,6 @@
 class Deck
   @@cards = [
-    {icon: "\u1F0A1", score: 1},
+    {icon: "\u1F0A1", score: 11},
     {icon: "\u1F0A2", score: 2},
     {icon: "\u1F0A3", score: 3},
     {icon: "\u1F0A4", score: 4},
@@ -13,7 +13,7 @@ class Deck
     {icon: "\u1F0AB", score: 10},
     {icon: "\u1F0AD", score: 10},
     {icon: "\u1F0AE", score: 10},
-    {icon: "\u1F0B1", score: 1},
+    {icon: "\u1F0B1", score: 11},
     {icon: "\u1F0B2", score: 2},
     {icon: "\u1F0B3", score: 3},
     {icon: "\u1F0B4", score: 4},
@@ -26,7 +26,7 @@ class Deck
     {icon: "\u1F0BB", score: 10},
     {icon: "\u1F0BD", score: 10},
     {icon: "\u1F0BE", score: 10},
-    {icon: "\u1F0C1", score: 1},
+    {icon: "\u1F0C1", score: 11},
     {icon: "\u1F0C2", score: 2},
     {icon: "\u1F0C3", score: 3},
     {icon: "\u1F0C4", score: 4},
@@ -39,7 +39,7 @@ class Deck
     {icon: "\u1F0CB", score: 10},
     {icon: "\u1F0CD", score: 10},
     {icon: "\u1F0CE", score: 10},
-    {icon: "\u1F0D1", score: 1},
+    {icon: "\u1F0D1", score: 11},
     {icon: "\u1F0D2", score: 2},
     {icon: "\u1F0D3", score: 3},
     {icon: "\u1F0D4", score: 4},
@@ -65,8 +65,6 @@ class Deck
   end
 
   def pull_card
-    card = cards[0]
-    cards.delete(cards[0])
-    card
+    cards.shift
   end
 end
