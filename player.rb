@@ -31,4 +31,19 @@ class Player
   def bust?
     @score > 21
   end
+
+  def show_info(show_cards)
+    print "#{name}'s cards: "
+    if show_cards
+      @hand.each { |card| print " #{card[:icon]} " }
+      puts "#{@name}'s score is: #{@score}"
+    else
+      @hand.each { print ' * ' }
+      puts
+    end
+  end
+
+  def show_bank
+    puts "#{name}'s bank: #{@bank}"
+  end
 end
