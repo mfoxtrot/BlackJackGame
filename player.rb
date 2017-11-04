@@ -23,4 +23,12 @@ class Player
     scores_array.each { |sc| @score += sc }
     scores_array.each { |sc| @score -= 10 if @score > 21 && sc == 11 }
   end
+
+  def empty_hand
+    @hand = []
+  end
+
+  def bust?
+    @score > 21
+  end
 end
