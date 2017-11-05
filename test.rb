@@ -1,4 +1,4 @@
-require_relative 'game.rb'
+require_relative 'terminal_interface.rb'
 
-g = Game.new('Player')
-g.start
+g = TerminalInterface.new
+g.start_game
